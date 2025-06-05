@@ -50,23 +50,25 @@
 	margin: 0 !important; /* 移除默认边距，使用gap来控制间距 */
 }
 
+.view:not(.hide) .section0 .cardBox-touchzoom {
+	box-shadow: none !important; /* 移除阴影 */
+}
+
 .view:not(.hide) .section0 .cardText {
-	position: absolute;
-	top: 0;
-	display: flex; /* 如果不需要媒体库标题显示, 请将flex改为none */
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	background-color: rgba(0, 0, 0, .5);
-	font-weight: bolder;
-	font-size: larger;
-	border-radius: 0.3em;
-	transition: .2s;
-	opacity: 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 0.3em;
+    opacity: .5; /* 确保标题始终可见 */
 }
 
 .view:not(.hide) .section0 .backdropCard:hover .cardText {
-	opacity: 1;
+    background: rgba(0, 0, 0, 0);
+    opacity: 1; /* 确保标题始终可见 */
 }
 
 .view:not(.hide) .section0 .cardText button {
@@ -77,9 +79,15 @@
 	background: none;
 }
 
-.view:not(.hide) .section0 .cardOverlayContainer label,
-.view:not(.hide) .section0 .sectionTitleContainer {
-	display: none !important;
+/* 取消隐藏卡片的文本 */
+/* .view:not(.hide) .section0 .cardOverlayContainer label, */
+/* .view:not(.hide) .section0 .sectionTitleContainer { */
+	/* display: none !important; */
+/* } */
+
+/* 小标题增加下边距 */
+.sectionTitleContainer>.sectionTitle {
+	margin-bottom: 0.5rem !important;
 }
 
 .view:not(.hide) .section0 .cardBox-touchzoom {
