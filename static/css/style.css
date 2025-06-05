@@ -29,6 +29,25 @@
 
 .view:not(.hide) .section0 {
 	z-index: 2;
+	margin-top: 2rem; /* 添加与banner的间距 */
+	padding: 0 1rem; /* 添加左右边距 */
+}
+
+.view:not(.hide) .section0 .emby-scroller .itemsContainer {
+	flex-wrap: wrap !important;
+	display: flex !important;
+	justify-content: flex-start !important;
+	gap: 1rem; /* 添加卡片之间的间距 */
+}
+
+.view:not(.hide) .section0 .emby-scroller {
+	overflow-x: hidden !important;
+}
+
+/* 调整卡片大小，可以根据需要修改数值 */
+.section0>div>div>.backdropCard {
+	--backdrop-cards: 4; /* 控制每行显示的卡片数量 */
+	margin: 0 !important; /* 移除默认边距，使用gap来控制间距 */
 }
 
 .view:not(.hide) .section0 .cardText {
@@ -295,7 +314,7 @@
 	}
 
 	.section0>div>div>.backdropCard {
-		--backdrop-cards: 1.5;
+		--backdrop-cards: 4;
 	}
 }
 
@@ -313,4 +332,14 @@
 
 .misty-banner-library-overflow {
 	overflow: visible !important;
+}
+
+.view:not(.hide) .section0 .emby-scroller .itemsContainer {
+    flex-wrap: wrap !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.view:not(.hide) .section0 .emby-scroller {
+    overflow-x: hidden !important;
 }

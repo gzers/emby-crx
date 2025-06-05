@@ -174,7 +174,8 @@ class Home {
 		$(".view:not(.hide) .section0 .emby-scrollbuttons").remove();
 		const items = $(".view:not(.hide) .section0 .emby-scroller .itemsContainer")[0].items;
 		if (CommonUtils.checkType() === 'pc') {
-			$(".view:not(.hide) .section0").detach().appendTo(".view:not(.hide) .misty-banner-library");
+			// 将section0放在banner后面而不是内部
+			$(".view:not(.hide) .section0").detach().insertAfter(".view:not(.hide) .misty-banner");
 		}
 
 		$(".misty-loading").fadeOut(500, () => $(".misty-loading").remove());
