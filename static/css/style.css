@@ -83,7 +83,7 @@
 	/* display: none !important; */
 /* } */
 
-/* 小标题增加下边距 */
+/* 媒体库列表的小标题增加下边距 */
 .sectionTitleContainer>.sectionTitle {
 	margin-bottom: 0.5rem !important;
 }
@@ -350,6 +350,8 @@
     overflow-x: hidden !important;
 }
 
+
+/* 媒体库响应化样式 */
 .view:not(.hide) .section0 .backdropCard {
     width: calc(100% / 10) !important; /* 10列布局 */
     min-width: 160px !important;
@@ -391,4 +393,13 @@
     .view:not(.hide) .section0 .backdropCard {
         width: calc(100% / 2) !important; /* 2列布局 */
     }
+}
+
+/* 媒体样式 */
+.view:not(.hide) .section4 .card {
+	transition: all 1.5s cubic-bezier(0, 1.75, .25, 1) 0s;
+}
+
+.view:not(.hide) .section4 .card:hover {
+	transform: scale(1.1) !important;
 }
